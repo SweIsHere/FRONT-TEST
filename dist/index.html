@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <title>Maqueta con Pantalla de Carga</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Asegurando que Playfair Display se aplique */
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <!-- Pantalla de bienvenida -->
+  <div id="welcome-screen" class="flex items-center justify-center flex-col text-center">
+    <h1 class="text-5xl font-playfair text-gray-800 mb-4">Pizzicato</h1>
+    <p class="text-lg text-gray-600 mb-6">¡Bienvenido! Presiona el botón para entrar.</p>
+    <button id="enter-button" class="px-6 py-2 text-white bg-black rounded-full hover:bg-gray-800 transition duration-300">
+      Entrar
+    </button>
+  </div>
+
+  <!-- Pantalla de carga -->
+  <div id="loading-screen" class="flex items-center justify-center flex-col text-center hidden">
+    <p class="text-lg text-gray-600 mb-6">Cargando...</p>
+    <div class="animate-spin rounded-full h-32 w-32 border-t-4 border-black"></div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="loading-sound" src="assets/piano/pianofront1.mp3"></audio>
+
+  <!-- Contenido principal -->
+  <div id="content" class="text-center hidden">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">¡Bienvenido al contenido!</h1>
+    <p class="text-lg text-gray-600 mb-6">Este es el contenido principal que aparece después de la pantalla de carga.</p>
+    <button class="px-6 py-2 text-white bg-black rounded-full hover:bg-gray-800 transition duration-300">
+      Explorar más
+    </button>
+  </div>
+
+  
